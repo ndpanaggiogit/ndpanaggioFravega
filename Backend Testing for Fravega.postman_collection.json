@@ -31,7 +31,20 @@
 				},
 				"description": "Obtener una lista de cervecerías que contengan el texto \"lagunitas\" en su nombre.\r\n"
 			},
-			"response": []
+			"response": [
+					{
+        				    "id": "761",
+        				    "name": "Lagunitas Brewing Co"
+   					 },
+   					 {
+        				    "id": "2434",
+        				    "name": "Lagunitas Brewing Co"
+   					 },
+   					 {
+        				    "id": "7526",
+        				    "name": "Lagunitas Seattle Taproom and Beer Sanctuary"
+    					}
+				    ]
 		},
 		{
 			"name": "Filter by Name and Value",
@@ -58,7 +71,16 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+					{
+        				    "id": "761",
+        				    "name": "Lagunitas Brewing Co"
+   					},
+    					{
+        				    "id": "2434",
+        				    "name": "Lagunitas Brewing Co"
+    					}
+				    ]
 		},
 		{
 			"name": "Get Details",
@@ -114,7 +136,27 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+					{
+					    "id": 761,
+					    "name": "Lagunitas Brewing Co",
+					    "brewery_type": "large",
+					    "street": "1280 N McDowell Blvd",
+					    "address_2": null,
+					    "address_3": null,
+					    "city": "Petaluma",
+					    "state": "California",
+					    "county_province": null,
+					    "postal_code": "94954-1113",
+					    "country": "United States",
+					    "longitude": "-122.661919826192",
+					    "latitude": "38.27264795",
+					    "phone": "7077694495",
+					    "website_url": "http://www.lagunitas.com",
+					    "updated_at": "2018-08-23T23:58:44.690Z",
+					    "created_at": "2018-07-24T01:32:57.570Z"
+					}
+				    ]
 		}
 	],
 	"protocolProfileBehavior": {}
