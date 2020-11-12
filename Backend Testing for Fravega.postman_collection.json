@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "032cfad3-15eb-474b-89b8-ee430ce01d31",
+		"name": "Backend Testing for Fravega",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET \"lagunitas\" in name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openbrewerydb.org/breweries/autocomplete?query=lagunitas\n\n\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openbrewerydb",
+						"org"
+					],
+					"path": [
+						"breweries",
+						"autocomplete"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "lagunitas\n\n\n"
+						}
+					]
+				},
+				"description": "Obtener una lista de cervecerías que contengan el texto \"lagunitas\" en su nombre.\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Filter by Name and Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openbrewerydb.org/breweries/autocomplete?query=Lagunitas Brewing Co\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openbrewerydb",
+						"org"
+					],
+					"path": [
+						"breweries",
+						"autocomplete"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Lagunitas Brewing Co\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c9214c27-8327-4281-ba3e-748fa0011b28",
+						"exec": [
+							"//assert\r",
+							"pm.test('status code is 200', function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(761);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.eql(\"Lagunitas Brewing Co\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.street).to.eql(\"1280 N McDowell Blvd\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.phone).to.eql(\"7077694495\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.openbrewerydb.org/breweries/761",
+					"protocol": "https",
+					"host": [
+						"api",
+						"openbrewerydb",
+						"org"
+					],
+					"path": [
+						"breweries",
+						"761"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
