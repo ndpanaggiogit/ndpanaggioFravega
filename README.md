@@ -37,6 +37,6 @@ There, add the libraries in "Classpath".
 You should also add the TestNG library; Link to copy; https://dl.bintray.com/testng-team/testng-eclipse-release.
 In Eclipse, go to "Help / Install New Software", click "Add", name "TestNG" and add link in "Location". Give ok, check all the TestNG boxes and click "Next" until the installation is finished.
 
-ChromeDriver; You should run and add the chromedriver file in path "C: \\ Chrome Driver 86 \\ chromedriver.exe".
-
+ChromeDriver; Download file chromedriver_win32 (2).zip . 
+You should run and add the chromedriver file in path "C: \\ Chrome Driver 86 \\ chromedriver.exe".
 If you followed the execution procedure correctly, you should be able to run the application.
